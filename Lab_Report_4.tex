@@ -1,0 +1,308 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+
+\title{Measuring spin-spin echos of Mineral Oil Using Pulsed Nuclear Magnetic Resonance}
+\author{Thomas Dore}
+\date{University of Texas at Austin}
+
+\usepackage{natbib}
+\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{tikz}
+\usepackage{siunitx}
+\usepackage{biblatex}
+\usepackage{hyperref}
+\addbibresource{bib}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+We measured the spin relaxation times of the nuclei in mineral oil. We applied a constant magnetic field on the mineral oil, causing all the nuclei to point in the same direction, and then sent a short electromagnetic pulse through the oil, causing the direction that the nuclei pointed in to change. We then used a second pulse to change the orientation again. We measured the direction the nuclei pointed in with a coil set perpendicular to the natural direction the nuclei pointed in when inside the static magnetic field. This coil, placed in what we called the $xy-plane$, was used to measure the time it took for the nuclei to return to the static orientation. We demonstrated that nuclei spin directions can be motivated by magnetic fields, and that they will return to the static field's orientation after a disturbance has passed.
+\end{abstract}
+
+\bigskip
+
+\section{Introduction}
+\subsection{Physics Motivation and Historical Motivation}
+    
+    Nuclear Magnetic Resonance is a very important part of much of modern science. It is frequently used to identify the constitution of an unknown material, i.e., spectroscopy. Perhaps the term MRI, short for "Magnetic Resonance Imaging" is more readily recognizable. Though somewhere along the line, the "N" for Nuclear was dropped from MRI, it is, in fact, the same process.
+    
+\bigskip
+
+    The time it takes for a sample's nucleis to return to the static field's orientation after a disturbance can be used to determine the constitution of a sample. 
+
+\bigskip
+
+Nuclear Magnetic Resonance was discovered nearly simultaneously in two separate labs. The two scientists both saw the effects on magnetic nuclei of a static magnetic field and subsequent continuous radio frequency that was changed across a resonance. Felix Bloch at Stanford, and Edward Purcell at Harvard both observed this process using different techniques in 1946. They were trying to determine the magnetic moments of atoms in liquids and solids.
+
+\bigskip
+
+There were two other major advances in early NMR. First, Erwin Hahn, in 1950 did a similar experiment, this time with small bursts of radio frequency, instead of an entire spectrum. He observed the spin-echo, where the nuclei returning to the magnetic static field pass through the xy-plane. Second, Richard Ernst and Weston Anderson utilized Fourier transformations to more cheaply and easily achieve high-quality NMR spectroscopy.
+
+\bigskip
+
+
+    
+\subsection{Theoretical Background}
+    
+    This lab primarily deals with the relaxation of spin orientation of nuclei in solids and liquids. There are two primary types of spin relaxations, spin-lattice relaxation (with time constant $T1$), and spin-spin relaxation (with time constant $T2$). 
+
+    \bigskip
+    
+    Spin-lattice relaxation is the process of the relaxation of the nuclei spin components that are parallel to the static magnetic field. The equation we used to calculate $T1$, is: $$M_{z}(t) = M_{0}(1-e^{-t/t_{1}})$$
+    
+    Where $M_{0}$ is the magnitude of the peak value. See \href{https://ocw.mit.edu/courses/physics/8-13-14-experimental-physics-i-ii-junior-lab-fall-2016-spring-2017/experiments/pulsed-nmr-spin-echoes/MIT8_13-14F16-S17exp12.pdf}{here}, for further details on how this equation was derived.
+    
+    \bigskip
+
+    Spin-spin relaxation is the process of the relaxation of the nuclei spin components that are perpendicular to the static magnetic field. The equation we used to calculate $T2$, is $$M_{xy}(t) = M_{0}*e^{-t/T_{2}}$$
+    
+    Where $M_{0}$ is the magnitude of the peak value. 
+    See \href{https://ocw.mit.edu/courses/physics/8-13-14-experimental-physics-i-ii-junior-lab-fall-2016-spring-2017/experiments/pulsed-nmr-spin-echoes/MIT8_13-14F16-S17exp12.pdf}{here}, for further details on how this equation was derived.
+
+\section{Experimental Setup and Procedure}
+    
+    The set up is as follows: Two powerful magnets are arranged to create a magnetic field, that will force the nuclei of our test material to all point in the same direction. We place a coil adjacent to these magnets, perpendicular to where the nuclei will point. This means we get no signal in the coil with no pulse present. There is a pulse probe placed in the device, this probe allows us to change the direction of the nuclei in the sample, thereby receiving a signal in the coil. 
+    
+    \bigskip
+    
+    In order to get a signal that we could interpret and utilize, it was important that we send two separate signals to the device, at a specific time apart. We utilized two different time-spacings between pulses, with different pulse widths, in order to collect data to interpret both the T1 and T2 for mineral oil. 
+     
+    
+    \bigskip
+    
+    
+    For T1, we caused a 180 \degree spin change on the nuclei in the material with the first pulse, resulting in no reading on the oscilloscope, as the nuclei were all pointed to the exact other direction, anti-parallel if you will, and were therefore still perpendicular to the coil. Then, after a short time, allowing for the nuclei to begin moving back to it's original position, but not quite crossing the xy-plane where the coil is placed, we send a second pulse, altering the width of the pulse to maximize the output reading on the oscilloscope. That is, to place the nuclei's spin pointing directly into the XY-plane. Then, after this, we increased the delay between the first and second pulse sequentially by a milisecond, and recorded the change in voltage. The subsequent graph became the basis of our analysis of the T1 time for mineral oil.
+     
+    
+    \bigskip
+    
+    
+    Measuring T2 followed a similar process. For T2, however, we maximized the signal received from the first pulse, meaning that the nuclei pointed in the xy-plane. Then, after a short delay, we sent a second pulse, and we used the pulse width to minimize the signal received, which means that pushed the nuclei to point 180\degree, or in the negative-z direction. We then saw a spin “echo”, or we saw a signal rise and fall, which means that the nuclei’s directions returned across the 180\degree disturbance, back to the static magnetic field’s direction. This means that the ”echo” has passed through the xy-plane of the coil before returning to the direction of the static magnetic field. We then repeated the second pulse $19$ more times, and used the resulting graph as the basis for our analysis and measurement of T2 for our sample of mineral oil.
+ 
+    
+    \bigskip
+    
+    During all of this it is important to note that we adjusted the frequency that the pulse was at between every time we took a series of data. We oscillated the frequency around the stated frequency on the TeachSpin magnetic device, that is $~15.6Hz$. Though we found that the frequency needed constant adjustment to remove as much noise as possible.
+    
+    \bigskip
+    
+    \par
+    
+    \bigskip
+
+    \begin{figure5}
+    \centering    
+    \includegraphics[scale=.1]{Schematic_lab4.JPG}
+   
+    \caption{Figure 1: Block diagram of the PS1-A Pulsed NMR apparatus.}
+    \par
+    \end{figure5}
+    \bigksip   
+
+\section{Data, Analysis, Results}
+    \bigskip
+    Our analysis of the relaxation times of mineral oil was graphically oriednted. First we plotted the data we took manually for T1, on a Voltage $(V)$ vs. Time graph. We had to manually adjust the data as, after a certain point, the values began to increase again. So, for all points that began to again increase in value, we took the difference between the absolute value of the y-value and the preceding y-value and subtracted it from the preceding value.
+    
+    \bigskip
+    
+    In order to determine the $T1$ value we needed to take the log of all the y-vales on the plot. In order to accomplish that, we had to vertically shift all the y-values so that they were all positive.
+    
+    \bigskip
+     
+    
+    \begin{figure996}
+    \centering    
+    \includegraphics[scale=.55]{T1_oil_graph_2.pdf}
+    \par
+    \centering
+    \par
+    \caption{Figure 2: T1 for Mineral Oil. Voltage (V) vs Time (ms). With a vertical shift of 1.8V to allow for a logarithmic analysis. 5 data sets overlayed.}
+    \par
+    \end{figure996}
+    \bigksip
+    
+    \bigskip
+    We then took the log of all the y-values in the data, and fit a line to it. We then took the slope of the resulting lines for our analysis.
+        \bigskip
+    
+    \begin{figure106}
+    \centering    
+    \includegraphics[scale=.55]{T1_oil_graph_3.pdf}
+    \par
+    \centering
+    \par
+    \caption{Figure 3: T1 for Mineral Oil. Voltage (Log(V)) vs Time (ms). 5 data sets overlayed}
+    \par
+    \end{figure106}
+    \bigksip
+    From this point the analysis is easy enough. We see from the equation that $T1$ is simply the negative inverse of the slope. We find that, in taking the mean of the negative inverses of the slopes, we come the value for T1 for the mineral oil $T1 = 0.12581 \pm 0.00565 ms$.
+    
+    \bigskip
+    
+     \begin{figure7889}
+    \centering    
+    \includegraphics[scale=1]{T1table.PNG}
+    \par
+    \centering
+    \par
+    \caption{Figure 4: Table for T1 values and $R^{2}$ values for the five trials.}
+    \par
+    \end{figure7889}
+    
+    \bigksip
+    
+    \par
+    
+    \bigskip
+    
+    We calculated $T2$ in two separate ways. We took two trials of manually calculating the peak-values at sequential steps at $1 ms$. We then used both resulting calculations to compare the values of T2.
+    
+    \bigskip
+    
+    \begin{figure55}
+    \centering    
+    \includegraphics[scale=.55]{T2_oil_graph_1.pdf}
+    \par
+    \centering
+    \par
+    \caption{Figure 5: T2 for Mineral Oil. Voltage (V) vs Time (ms). Manually taken data. Two data sets.}
+    \par
+    \end{figure55}
+    \bigksip
+    
+    \bigskip
+    
+    We took the log of the y-values on the manually taken data. We then fit the lines and took the slopes.
+    
+    \bigskip
+    
+    \begin{figure6}
+    \centering    
+    \includegraphics[scale=.55]{T2_oil_graph_2.pdf}
+    \par
+    \centering
+    \par
+    \caption{Figure 6: T2 for Mineral Oil. Voltage (V) vs Time (ms). Manually taken data. Two data sets.}
+    \par
+    \end{figure6}
+    \bigksip
+    
+    \bigskip
+From this point the analysis is easy enough. We see from the equation that $T2$ is simply the negative inverse of the slope. We find that, in taking the mean of the negative inverses of the slopes, we come the value for T2 for the mineral oil $T2 = 1.589 \pm .068 ms$, from the data that was manually taken.
+       \bigskip
+       
+        \begin{figure67889}
+    \centering    
+    \includegraphics[scale=1]{T21table.PNG}
+    \par
+    \centering
+    \par
+    \caption{Figure 7: Table for T2 values and $R^{2}$ values for the two manually taken trials.}
+    \par
+    \end{figure67889}
+    \bigksip
+    
+     \bigksip
+    
+    \par
+    
+    \bigskip
+    
+    We also took the same data for T2 using LabView, with 20 repeated B-pulses all in a row. 
+    
+    \bigskip
+    
+    \begin{figure9}
+    \centering    
+    \includegraphics[scale=.55]{T2_oil_graph_3.pdf}
+    \par
+    \centering
+    \par
+    \caption{Figure 8: T2 for Mineral Oil. Voltage (V) vs Time (ms).Data retrieved from LabView program. X-axis scaled in accordance with manually taken data to a scale of (1.8 ms/1100 channels). Five data sets.}
+    \par
+    \end{figure9}
+    \bigksip
+    
+    \bigskip
+    
+    We then took the data, and using just the peaks, calculated the log of all the y-values. The R-Squared of all of these linear fits were above $0.99$.
+    
+    
+       \bigskip
+    
+    \begin{figure889}
+    \centering    
+    \includegraphics[scale=.45]{T2_oil_graph_5.pdf}
+    \par
+    \centering
+    \par
+    \caption{Figure 9: T2 for Mineral Oil. Voltage (Log(V)) vs Time (ms). Peaks isolated. Y-values evaluated logramithmically. Data retrieved from LabView program. X-axis scaled in accordance with manually taken data to a scale of (1.8 ms/1100 channels). Five data sets.}
+    \par
+    \end{figure889}
+    \bigksip
+    
+    \bigskip
+    From this point the analysis is easy enough. We see from the equation that $T2$ is simply the negative inverse of the slope. We find that, in taking the mean of the negative inverses of the slopes, we come the value for T2 for the mineral oil $T2 = 1.304 \pm .034 ms$, from the data that was taken by LabView.
+      \bigskip
+    
+    \begin{figure7889}
+    \centering    
+    \includegraphics[scale=1]{T2table.PNG}
+    \par
+    \centering
+    \par
+    \caption{Figure 10: Table for T2 values and $R^{2}$ values for the five trials.}
+    \par
+    \end{figure7889}
+    \bigksip
+
+\section{Conclusion}
+   Using NMR (Nuclear Magnetic Resonance), we were able to measure the spin relaxation times of nuclei in mineral oil. We applied a static magnetic field to the sample of mineral oil, and then disturbed it with a radio frequency pulse. We utilized two disturbances to measure T1 and T2 of the mineral oil. We demonstrated that the magnetic field of the nuclei of condensed matter responds to both a static magnetic field, and to pulsed radio frequencies. 
+
+\bigskip
+\bigskip
+
+\section{Bibliography}
+\bigskip
+
+PHY353L Modern Lab. Pulsed NMR \url{https://web2.ph.utexas.edu/~phy353l/SemiconductorPhysics/PulsedNMR/pulsedNMR.html} Accessed 1 July 2019
+
+
+
+\bigskip
+\par
+Relaxation effects in Nuclear Magnetic Resonance Absorption. N Bloembergen. E.M. Purcell. R. V. Pound.
+\url{https://web2.ph.utexas.edu/~phy353l/PulsedNMR/PhysRev.73.679.Bloembergen.pdf} Accessed 30 June 2019
+\bigskip
+\par
+Spin Echoes. E.L. Hahn.
+\url{https://web2.ph.utexas.edu/~phy353l/PulsedNMR/PhysRev.80.580.Hahn.pdf} Accessed 1 July 2019
+\bigskip
+\par
+Effects of Diffusion on Free Precession in Nuclear Magnetic Resonance Experiments. E.M. Purcell. H.Y. Carr.
+\url{https://web2.ph.utexas.edu/~phy353l/PulsedNMR/PhysRev.94.630.Carr.Purcell.pdf Accessed 1 July 2019}
+\bigskip
+\par
+Pulsed NMR. Teachspin. Manual.
+\url{https://web2.ph.utexas.edu/~phy353l/PulsedNMR/Manual.TeachSpin.pdf} Accessed 28 June 2019
+\bigskip
+\par
+Pulsed Nuclear Magnetic Resonance.
+\url{https://web2.ph.utexas.edu/~phy353l/PulsedNMR/Pulsed_NMR.pdf} Accessed 29 June 2019
+\bigskip
+\par
+The Nobel Prize in Chemistry. 1991. \url{https://www.nobelprize.org/prizes/chemistry/1991/perspectives/} Accessed 07 July 2019
+\bigskip
+\par
+Pulsed Nuclear Magnetic Resonance: Spin Echoes \url{https://ocw.mit.edu/courses/physics/8-13-14-experimental-physics-i-ii-junior-lab-fall-2016-spring-2017/experiments/pulsed-nmr-spin-echoes/MIT8_13-14F16-S17exp12.pdf} Accessed 27 June 2019.
+\bigskip
+\par
+
+The Basics of NMR. Hornak, Joseph P. Ph.D..
+\url{http://www.cis.rit.edu/htbooks/nmr/} Accessed 07 July 2019.
+\end{document}
